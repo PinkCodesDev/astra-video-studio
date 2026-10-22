@@ -1,0 +1,821 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astra Video Studio</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <div class="app-shell">
+
+        <!-- =====================================
+             SIDEBAR
+        ====================================== -->
+
+        <aside class="sidebar">
+
+            <div class="brand">
+                <div class="brand-badge">P</div>
+
+                <div class="brand-copy">
+                    <h1>PinkCodes</h1>
+                    <p>Astra Video Studio</p>
+                </div>
+            </div>
+
+            <div class="sidebar-section-label">
+                Workspace
+            </div>
+
+            <nav class="nav">
+
+                <button class="nav-item active" data-page="overview">
+                    <span class="nav-icon">◫</span>
+                    <span>Overview</span>
+                </button>
+
+                <button class="nav-item" data-page="projects">
+                    <span class="nav-icon">▦</span>
+                    <span>Projects</span>
+                </button>
+
+                <button class="nav-item" data-page="new-project">
+                    <span class="nav-icon">＋</span>
+                    <span>New Project</span>
+                </button>
+
+                <button class="nav-item" data-page="library">
+                    <span class="nav-icon">▤</span>
+                    <span>B-roll Library</span>
+                </button>
+
+                <button class="nav-item" data-page="ai-editor">
+                    <span class="nav-icon">✦</span>
+                    <span>AI Editor</span>
+                </button>
+
+            </nav>
+
+            <div class="sidebar-footer">
+
+                <button class="nav-item" data-page="settings">
+                    <span class="nav-icon">⚙</span>
+                    <span>Settings</span>
+                </button>
+
+                <div class="engine-card">
+                    <div class="engine-dot"></div>
+
+                    <div>
+                        <strong>Astra Engine</strong>
+                        <small>Offline / Not connected</small>
+                    </div>
+                </div>
+
+            </div>
+
+        </aside>
+
+        <!-- =====================================
+             MAIN LAYOUT
+        ====================================== -->
+
+        <main class="main-layout">
+
+            <!-- TOPBAR -->
+
+            <header class="topbar">
+
+                <div class="topbar-left">
+                    <div class="topbar-title-wrap">
+                        <span class="eyebrow">
+                            Creative AI Workstation
+                        </span>
+
+                        <h2>Astra Dashboard</h2>
+                    </div>
+                </div>
+
+                <div class="topbar-right">
+                    <div class="workspace-pill">
+                        Behave Workspace
+                    </div>
+
+                    <div class="avatar">PC</div>
+                </div>
+
+            </header>
+
+            <!-- =====================================
+                 CONTENT AREA
+            ====================================== -->
+
+            <section class="content-area">
+
+                <!-- =================================
+                     OVERVIEW
+                ================================== -->
+
+                <section class="page active" id="overview">
+
+                    <div class="hero-panel">
+
+                        <div class="hero-copy">
+
+                            <span class="eyebrow">
+                                PinkCodes × AI Editing
+                            </span>
+
+                            <h1>
+                                Build, edit and automate
+                                your video workflow.
+                            </h1>
+
+                            <p>
+                                A professional AI-powered workspace
+                                for Shorts, long-form content and
+                                smart B-roll selection.
+                            </p>
+
+                            <div class="hero-actions">
+
+                                <button
+                                    class="primary-btn"
+                                    id="new-project-button"
+                                >
+                                    + Create Project
+                                </button>
+
+                                <button
+                                    class="secondary-btn"
+                                    id="view-library-button"
+                                >
+                                    Open Library
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <!-- SYSTEM STATUS -->
+
+                        <div class="hero-glow-card">
+
+                            <div class="hero-mini-label">
+                                System Status
+                            </div>
+
+                            <div class="status-grid">
+
+                                <div class="status-mini-card">
+                                    <span>AI Engine</span>
+                                    <strong>Offline</strong>
+                                </div>
+
+                                <div class="status-mini-card">
+                                    <span>B-roll Library</span>
+                                    <strong>673 Clips</strong>
+                                </div>
+
+                                <div class="status-mini-card">
+                                    <span>Breed Folders</span>
+                                    <strong>107</strong>
+                                </div>
+
+                                <div class="status-mini-card">
+                                    <span>CapCut Engine</span>
+                                    <strong>Integration not verified</strong>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- DASHBOARD GRID -->
+
+                    <div class="dashboard-grid">
+
+                        <!-- METRICS -->
+
+                        <div class="panel">
+
+                            <div class="panel-head">
+                                <div>
+                                    <span class="eyebrow">Metrics</span>
+                                    <h3>Workspace Overview</h3>
+                                </div>
+                            </div>
+
+                            <div class="stats-grid">
+
+                                <div class="stat-card">
+                                    <span class="stat-label">
+                                        B-roll Clips
+                                    </span>
+
+                                    <strong>673</strong>
+                                    <small>Indexed library assets</small>
+                                </div>
+
+                                <div class="stat-card">
+                                    <span class="stat-label">
+                                        Breed Folders
+                                    </span>
+
+                                    <strong>107</strong>
+                                    <small>Detected categories</small>
+                                </div>
+
+                                <div class="stat-card">
+                                    <span class="stat-label">
+                                        AI Model
+                                    </span>
+
+                                    <strong>Astra</strong>
+                                    <small>API not connected</small>
+                                </div>
+
+                                <div class="stat-card">
+                                    <span class="stat-label">
+                                        Projects
+                                    </span>
+
+                                    <strong>0</strong>
+                                    <small>No generated edits yet</small>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- CHOOSE FORMAT -->
+
+                        <div class="panel">
+
+                            <div class="panel-head">
+                                <div>
+                                    <span class="eyebrow">Create</span>
+                                    <h3>Choose Format</h3>
+                                </div>
+                            </div>
+
+                            <div class="formats-grid">
+
+                                <button
+                                    class="format-card"
+                                    data-format="SHORT"
+                                >
+
+                                    <div class="format-top">
+                                        <span class="format-badge">
+                                            9:16
+                                        </span>
+
+                                        <span class="format-type">
+                                            SHORT
+                                        </span>
+                                    </div>
+
+                                    <h4>Short Form</h4>
+
+                                    <p>
+                                        Shorts, TikToks and Reels
+                                        with intelligent B-roll
+                                        selection and fast pacing.
+                                    </p>
+
+                                </button>
+
+                                <button
+                                    class="format-card"
+                                    data-format="LONG"
+                                >
+
+                                    <div class="format-top">
+                                        <span class="format-badge">
+                                            16:9
+                                        </span>
+
+                                        <span class="format-type">
+                                            LONG
+                                        </span>
+                                    </div>
+
+                                    <h4>Long Form</h4>
+
+                                    <p>
+                                        YouTube videos with narration,
+                                        photos, animations and
+                                        structured editing.
+                                    </p>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <!-- RECENT PROJECTS -->
+
+                        <div class="panel">
+
+                            <div class="panel-head">
+                                <div>
+                                    <span class="eyebrow">Projects</span>
+                                    <h3>Recent Projects</h3>
+                                </div>
+                            </div>
+
+                            <div class="empty-state">
+
+                                <div class="empty-icon">▦</div>
+
+                                <h4>No projects yet</h4>
+
+                                <p>
+                                    Generated projects will appear
+                                    here once the editor starts
+                                    creating them.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <!-- ASTRA ASSISTANT -->
+
+                        <div class="panel ai-panel">
+
+                            <div class="panel-head">
+                                <div>
+                                    <span class="eyebrow">
+                                        AI Console
+                                    </span>
+
+                                    <h3>Astra Assistant</h3>
+                                </div>
+                            </div>
+
+                            <div class="ai-console">
+
+                                <div class="ai-message ai-message-system">
+                                    Astra engine is ready for setup.
+                                </div>
+
+                                <div class="ai-message">
+                                    Connect your API and start
+                                    generating smart video workflows.
+                                </div>
+
+                                <div class="ai-input-row">
+
+                                    <input
+                                        type="text"
+                                        placeholder="Ask Astra to build a project..."
+                                        disabled
+                                    >
+
+                                    <button disabled>
+                                        Send
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- =================================
+                     NEW PROJECT
+                ================================== -->
+
+                <section class="page" id="new-project">
+
+                    <div class="panel page-panel">
+
+                        <div class="panel-head">
+                            <div>
+                                <span class="eyebrow">
+                                    Production Setup
+                                </span>
+
+                                <h3>Create New Project</h3>
+                            </div>
+                        </div>
+
+                        <form id="project-form" class="project-form">
+
+                            <div class="form-grid">
+
+                                <div class="field">
+
+                                    <label for="project-name">
+                                        Project name
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="project-name"
+                                        placeholder="e.g. TOP 3 Most Demanding Breeds"
+                                        required
+                                    >
+
+                                </div>
+
+                                <div class="field">
+
+                                    <label for="project-format">
+                                        Format
+                                    </label>
+
+                                    <select id="project-format">
+                                        <option value="SHORT">
+                                            Short Form — 9:16
+                                        </option>
+
+                                        <option value="LONG">
+                                            Long Form — 16:9
+                                        </option>
+                                    </select>
+
+                                </div>
+
+                                <div class="field">
+
+                                    <label for="project-series">
+                                        Series
+                                    </label>
+
+                                    <select id="project-series">
+                                        <option value="top3">
+                                            TOP 3
+                                        </option>
+
+                                        <option value="characteristics">
+                                            Breed Characteristics
+                                        </option>
+
+                                        <option value="custom">
+                                            Custom
+                                        </option>
+                                    </select>
+
+                                </div>
+
+                                <div class="field">
+
+                                    <label for="project-breeds">
+                                        B-roll folders
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="project-breeds"
+                                        placeholder="e.g. Husky, Malinois, Beagle"
+                                    >
+
+                                </div>
+
+                                <div class="field full-width">
+
+                                    <label for="project-voice">
+                                        Voice-over file
+                                    </label>
+
+                                    <input
+                                        type="file"
+                                        id="project-voice"
+                                        accept="audio/*"
+                                    >
+
+                                </div>
+
+                            </div>
+
+                            <div class="form-actions">
+
+                                <button
+                                    class="primary-btn"
+                                    type="submit"
+                                >
+                                    Create Project
+                                </button>
+
+                                <button
+                                    class="secondary-btn"
+                                    type="button"
+                                >
+                                    Save Draft
+                                </button>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </section>
+
+                <!-- =================================
+                     PROJECTS
+                ================================== -->
+
+                <section class="page" id="projects">
+
+                    <div class="panel page-panel">
+
+                        <div class="panel-head">
+                            <div>
+                                <span class="eyebrow">
+                                    Production
+                                </span>
+
+                                <h3>Projects</h3>
+                            </div>
+                        </div>
+
+                        <div class="placeholder-block">
+                            Project manager UI coming next.
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- =================================
+                     B-ROLL LIBRARY
+                ================================== -->
+
+                <section class="page" id="library">
+
+                    <div class="panel page-panel">
+
+                        <div class="panel-head">
+                            <div>
+                                <span class="eyebrow">
+                                    Assets
+                                </span>
+
+                                <h3>B-roll Library</h3>
+                            </div>
+                        </div>
+
+                        <div class="placeholder-block">
+                            Breed library browser coming next.
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- =================================
+                     AI EDITOR
+                ================================== -->
+
+                <section class="page" id="ai-editor">
+
+                    <!-- EDITOR HEADER -->
+
+                    <div class="editor-header">
+
+                        <div>
+                            <span class="eyebrow">
+                                PINKCODES / PRODUCTION
+                            </span>
+
+                            <h1>Astra AI Editor</h1>
+
+                            <p>
+                                Your AI-powered video workspace.
+                            </p>
+                        </div>
+
+                        <span class="editor-status">
+                            LOCAL PREVIEW MODE
+                        </span>
+
+                    </div>
+
+                    <!-- EDITOR WORKSPACE -->
+
+                    <div class="editor-workspace">
+
+                        <!-- MEDIA PANEL -->
+
+                        <aside class="editor-panel editor-assets">
+
+                            <div class="editor-panel-title">
+                                <h3>Media Library</h3>
+                                <span>01</span>
+                            </div>
+
+                            <p class="editor-description">
+                                Load a video to preview your footage.
+                            </p>
+
+                            <label
+                                class="editor-upload"
+                                for="editor-video-input"
+                            >
+                                <span class="editor-upload-icon">+</span>
+
+                                <strong>Import Media</strong>
+
+                                <small>
+                                    Select video from your computer
+                                </small>
+                            </label>
+
+                            <input
+                                id="editor-video-input"
+                                type="file"
+                                accept="video/*,.mp4,.mov,.webm"
+                                class="editor-file-input"
+                            >
+
+                            <div
+                                class="editor-media-card"
+                                id="editor-media-card"
+                                hidden
+                            >
+                                <span class="editor-media-icon">
+                                    ▶
+                                </span>
+
+                                <div>
+                                    <strong id="editor-file-name"></strong>
+                                    <small id="editor-file-details"></small>
+                                </div>
+
+                            </div>
+
+                            <!-- AI ENGINE -->
+
+                            <div class="editor-side-section">
+
+                                <span class="eyebrow">
+                                    ASTRA ASSISTANT
+                                </span>
+
+                                <h3>AI Engine</h3>
+
+                                <p>
+                                    Automatic editing and B-roll matching
+                                    will be available after backend integration.
+                                </p>
+
+                                <div class="editor-offline">
+                                    <span class="editor-offline-dot"></span>
+                                    AI not connected
+                                </div>
+
+                            </div>
+
+                        </aside>
+
+                        <!-- VIDEO PREVIEW -->
+
+                        <div class="editor-panel editor-monitor">
+
+                            <div class="editor-panel-title">
+                                <h3>Program Monitor</h3>
+                                <span>9:16 WORKSPACE</span>
+                            </div>
+
+                            <div class="editor-preview-stage">
+
+                                <div
+                                    class="editor-preview-empty"
+                                    id="editor-preview-empty"
+                                >
+                                    <span class="editor-empty-symbol">
+                                        ▶
+                                    </span>
+
+                                    <strong>No video loaded</strong>
+
+                                    <small>
+                                        Import media to start previewing
+                                    </small>
+                                </div>
+
+                                <video
+                                    id="editor-preview-video"
+                                    class="editor-player"
+                                    controls
+                                    playsinline
+                                    preload="metadata"
+                                    hidden
+                                ></video>
+
+                            </div>
+
+                            <div class="editor-monitor-footer">
+                                <span>LOCAL VIDEO PREVIEW</span>
+                                <span id="editor-monitor-time">
+                                    00:00 / 00:00
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- =================================
+                         TIMELINE
+                    ================================== -->
+
+                    <div class="editor-panel editor-timeline">
+
+                        <div class="editor-panel-title">
+                            <h3>Timeline</h3>
+                            <span>PREVIEW MODE</span>
+                        </div>
+
+                        <div class="editor-ruler">
+                            <span id="editor-time-start">00:00</span>
+                            <span id="editor-time-end">00:00</span>
+                        </div>
+
+                        <input
+                            type="range"
+                            id="editor-seek"
+                            class="editor-seek"
+                            min="0"
+                            max="100"
+                            step="0.01"
+                            value="0"
+                            disabled
+                            aria-label="Przewijanie nagrania"
+                        >
+
+                        <div class="editor-track">
+
+                            <div class="editor-track-name">
+                                VIDEO
+                            </div>
+
+                            <div
+                                class="editor-track-content"
+                                id="editor-track-content"
+                            >
+                                <span>No media loaded</span>
+                            </div>
+
+                        </div>
+
+                        <div class="editor-timeline-footer">
+                            <span>PinkCodes Astra Video Studio</span>
+                            <span>Local preview · No AI processing</span>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- =================================
+                     SETTINGS
+                ================================== -->
+
+                <section class="page" id="settings">
+
+                    <div class="panel page-panel">
+
+                        <div class="panel-head">
+                            <div>
+                                <span class="eyebrow">
+                                    Configuration
+                                </span>
+
+                                <h3>Settings</h3>
+                            </div>
+                        </div>
+
+                        <div class="placeholder-block">
+                            CapCut, API and workspace settings coming next.
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </section>
+
+        </main>
+
+    </div>
+</body>
+
+</html>

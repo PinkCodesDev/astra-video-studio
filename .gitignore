@@ -1,0 +1,35 @@
+﻿# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# API keys and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Local media and generated files
+inputs/
+outputs/
+references/
+memory/
+
+# Video and audio files
+*.mp4
+*.mov
+*.mkv
+*.avi
+*.mp3
+*.wav
+*.aac
+*.flac
+
+# Development
+.vscode/
+.idea/
+node_modules/
+*.log
